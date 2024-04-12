@@ -1,0 +1,32 @@
+[
+    {
+        "amount": 50,
+        "paidTo": "Supermarket",
+        "description": "Groceries",
+        "category": "Food"
+    },
+    {
+        "amount": 30,
+        "paidTo": "Gas Station",
+        "description": "Fuel",
+        "category": "Transportation"
+    },
+    {
+        "amount": 100,
+        "paidTo": "Restaurant",
+        "description": "Dinner with friends",
+        "category": "Food"
+    },
+    {
+        "amount": 200,
+        "paidTo": "Electricity Company",
+        "description": "Electricity Bill",
+        "category": "Utilities"
+    },
+    {
+        "amount": 20,
+        "paidTo": "Internet Provider",
+        "description": "Internet Subscription",
+        "category": "Utilities"
+    }
+]

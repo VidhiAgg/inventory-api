@@ -1,0 +1,28 @@
+[
+    {
+        "amount": 500,
+        "description": "Salary",
+        "category": "Income",
+        "transactionDate": "2024-03-28T08:00:00Z"
+    },
+    {
+        "amount": 200,
+        "description": "Freelance Work",
+        "category": "Income",
+        "transactionDate": "2024-03-27T08:00:00Z"
+    },
+    {
+        "amount": 100,
+        "description": "Gift",
+        "category": "Income",
+        "transactionDate": "2024-03-26T08:00:00Z"
+    },
+    {
+        "amount": 300,
+        "description": "Investment Dividends",
+        "category": "Income",
+        "transactionDate": "2024-03-25T08:00:00Z"
+    }
+]
+
+
