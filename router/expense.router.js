@@ -2,23 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const Expense = require("../models/expense.model");
 const expenseRouter = express.Router();
-const expenseJsonRecord = JSON.parse(fs.readFileSync("./data/expense.json"))
 
-expenseRouter.post("/create", async (req,res)=>{
-    try{
-        for(record  of expenseJsonRecord){
-            const newRecord = new Expense(record);
-            await newRecord.save();
-        }
-        console.log("Record added successfully");
-    res.status(201).json({
-      success: true,
-      message: "Expenses created successfully",
-    });
-    }catch(error){
-        console.error("Error in seeding the data")
-    }
-})
 
 expenseRouter.get("/", async (req, res) => {
     try {
