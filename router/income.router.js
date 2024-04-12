@@ -1,24 +1,7 @@
 const express = require('express');
-const fs = require('fs');
 const Income = require("../models/income.model");
 const incomeRouter = express.Router();
-const incomeJsonRecord = JSON.parse(fs.readFileSync("./data/income.json"))
 
-incomeRouter.post("/create", async (req,res)=>{
-    try{
-        for(record  of incomeJsonRecord){
-            const newRecord = new Income(record);
-            await newRecord.save();
-        }
-        console.log("Record added successfully");
-    res.status(201).json({
-      success: true,
-      message: "Incomes created successfully",
-    });
-    }catch(error){
-        console.error("Error in seeding the data")
-    }
-})
 
 incomeRouter.get("/", async (req, res) => {
     try {

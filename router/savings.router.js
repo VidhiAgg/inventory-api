@@ -1,24 +1,7 @@
 const express = require('express');
-const fs = require('fs');
 const Saving = require("../models/savings.model");
 const savingRouter = express.Router();
-const savingJsonRecord = JSON.parse(fs.readFileSync("./data/savings.json"))
 
-savingRouter.post("/create", async (req,res)=>{
-    try{
-        for(record  of savingJsonRecord){
-            const newRecord = new Saving(record);
-            await newRecord.save();
-        }
-        console.log("Record added successfully");
-    res.status(201).json({
-      success: true,
-      message: "Savings created successfully",
-    });
-    }catch(error){
-        console.error("Error in seeding the data")
-    }
-})
 
 savingRouter.get("/", async (req, res) => {
     try {
